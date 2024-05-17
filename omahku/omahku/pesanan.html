@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Omahku Hostel - Pemesanan Kamar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/omahku.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <style>
+      .booking-form {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .booking-form h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .booking-form label {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .booking-form input,
+      .booking-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .booking-form input:focus,
+      .booking-form textarea:focus {
+        outline: none;
+        border-color: #6dabe4;
+      }
+
+      .booking-form textarea {
+        resize: none;
+        height: 120px;
+      }
+
+      .booking-form button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .booking-form button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header Area Start -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo">
+                <h1>Omahku</h1>
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="properties.html">Properti</a></li>
+                <li><a href="contact.html">Tentang Kami</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li>
+                  <a href="pesanan.html"
+                    ><i class="fa fa-calendar"></i>Reservasi</a
+                  >
+                </li>
+              </ul>
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- ***** Booking Form Start ***** -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="booking-form">
+              <h3>Pemesanan Kamar</h3>
+              <form id="booking-form" action="#" method="post">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label for="nama">Nama Lengkap</label>
+                      <input
+                        type="text"
+                        name="nama"
+                        id="nama"
+                        placeholder="Masukkan Nama Lengkap Anda"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Masukkan Alamat Email Anda"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label for="phone">Nomor Telepon</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Masukkan Nomor Telepon Anda"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label for="checkin">Tanggal Check-in</label>
+                      <input type="date" name="checkin" id="checkin" required />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <label for="checkout">Tanggal Check-out</label>
+                      <input
+                        type="date"
+                        name="checkout"
+                        id="checkout"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="pesan">Pesan</label>
+                      <textarea
+                        name="pesan"
+                        id="pesan"
+                        placeholder="Masukkan Pesan Anda (Opsional)"
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button
+                        type="submit"
+                        id="form-submit"
+                        class="orange-button"
+                      >
+                        Kirim Pemesanan
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Booking Form End ***** -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="text-align-center">
+          <p>Omahku Hostel Yogyakarta</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
